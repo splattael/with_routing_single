@@ -4,6 +4,7 @@ gemfile(true) do
   source "https://rubygems.org"
 
   gem "railties", "~> 4.2.7.1", require: %w[rails action_controller rails/test_help]
+  # gem "railties", "~> 5.0.1", require: %w[rails action_controller rails/test_help]
 end
 
 ENV["RAILS_ENV"] = "test"
