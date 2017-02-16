@@ -15,7 +15,7 @@ class WithRoutingApp < Rails::Application
   config.eager_load = false
 
   routes.append do
-    root to: "simple#index"
+    root to: "root#index"
     get "simple" => "simple#index"
     get "with_defaults" => "with_defaults#index"
   end
@@ -25,6 +25,12 @@ end
 
 class ApplicationController < ActionController::Base
   include Rails.application.routes.url_helpers
+end
+
+class RootController < ApplicationController
+  def index
+    render plain: "root!"
+  end
 end
 
 class SimpleController < ApplicationController
